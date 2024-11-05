@@ -1,0 +1,103 @@
+name: Bug Report
+description: "File a bug report"
+title: "[Bug] "
+labels: ["bug", "triage"]
+assignees:
+  - Chris-RH
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to fill out this bug report.
+  - type: markdown
+    attributes:
+      value: "## Please do not link to or attach project files here!"
+  - type: markdown
+    attributes:
+      value: Instead please send a link via email to [unitysupprt@renderheads.com](mailto:unitysupport@renderheads.com) quoting this issue in your email's subject (i.e. '[Bug] Something isn't quite right \#1234') and providing a link to the issue in your message.
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity Version
+      description: The specific version of the Unity editor you are using.
+      placeholder: "e.g. 2021.3.27f1"
+    validations:
+      required: true
+  - type: dropdown
+    id: avprodecklink-edition
+    attributes:
+      label: AVPro DeckLink edition
+      options:
+        - Trial
+        - Full
+    validations:
+      required: true
+  - type: input
+    id: avprodecklink-version
+    attributes:
+      label: AVPro Decklink Version
+      description: The version of the AVPro DeckLink plugin you are using.
+      placeholder: "e.g. 1.9.8"
+    validations:
+      required: true
+  - type: input
+    id: desktopvideo-version
+    attributes:
+      label: Desktop Video version
+      description: The version of Desktop Video you are using.
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: Which Windows version(s) are you using?
+      description: Please provide the OS version for each platform you're reporting this issue for.
+      placeholder: "e.g. Windows 10"
+    validations:
+      required: true
+  - type: dropdown
+    id: graphics-apis
+    attributes:
+      label: Which graphics API(s) are you using?
+      description: You may select more than one.
+      options:
+        - Direct3D 11
+        - Direct3D 12
+      multiple: true
+    validations:
+      required: true
+  - type: textarea
+    id: decklink-device
+    attributes:
+      label: Decklink device model
+      description: Please provide details of the DeckLink device you're using.
+    validations:
+      required: true
+  - type: textarea
+    id: cables
+    attributes:
+      label: Cables used
+      description: Please provide details of the cables you are using.
+    validations:
+      required: true
+  - type: textarea
+    id: video-mode
+    attributes:
+      label: Video mode
+      description: Please provide the full specification of the video mode you are using, including: resolution, framerate, and pixel format.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: The issue
+      description: Please describe the issue, how to reproduce it and what you expected the outcome to be.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Please provide any relevant log output here.
+      render: shell
+    validations:
+      required: false

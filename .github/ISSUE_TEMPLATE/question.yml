@@ -1,0 +1,27 @@
+name: Question
+description: "Ask a question"
+title: "[Question] "
+labels: ["question", "triage"]
+assignees:
+  - Chris-RH
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filling out this question form!
+  - type: input
+    id: avprodecklink-version
+    attributes:
+      label: AVPro DeckLink Version
+      description: The version of the AVPro DeckLink plugin your question is about.
+      placeholder: "e.g. 1.9.8"
+    validations:
+      required: false
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Ask your question here
+      placeholder: How do I...
+    validations:
+      required: true
