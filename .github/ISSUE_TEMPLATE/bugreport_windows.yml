@@ -83,7 +83,7 @@ body:
     id: video-mode
     attributes:
       label: Video mode
-      description: Please provide the full specification of the video mode you are using, including: resolution, framerate, and pixel format.
+      description: "Please provide the full specification of the video mode you are using, including: resolution, framerate, and pixel format."
     validations:
       required: true
   - type: textarea
